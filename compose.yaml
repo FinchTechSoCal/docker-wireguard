@@ -1,4 +1,3 @@
---- 
 services:
 #
   wireguard:
@@ -20,7 +19,7 @@ services:
       - PERSISTENTKEEPALIVE_PEERS=${WGPERSISTENTKEEPALIVE_PEERS} #optional
       - LOG_CONFS=${WGLOG_CONFS} #optional
     volumes:
-      - ${LOCVOL1}wireguard:/config
+      - ${APPDATA}/wireguard:/config
       - /lib/modules:/lib/modules #optional
     ports:
       - 51820:51820/udp
